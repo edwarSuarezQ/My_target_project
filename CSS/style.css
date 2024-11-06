@@ -1,0 +1,90 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;/*hace que el ancho y el alto de un elemento incluya tambien sus  bordes y el paddin*/
+}
+
+body{
+    background-color: #1a1a1a;
+    height: 100vh;
+    display: block;
+    text-align: center;
+    padding-top: 30px;
+}
+
+.contenedor{
+    width: 100%;
+    height: auto;
+}
+
+.tarjeta{
+    background-color: rgb(138, 41, 235);
+    width: 350px; 
+    margin: 0 auto;
+    text-align: center;
+    padding: 30px;
+    border-radius: 20px;
+    border: 2px solid rgb(235, 11, 235);
+}
+
+h1 {
+    color: white;
+    margin: 10px 0;
+}
+
+p{
+    color: white;
+    margin-bottom: 20px;
+    margin: 20px 0;
+    padding: 20px;
+    background-color:rgba(255, 2555, 255, 0.3);
+    border-radius: 8px;
+    border: 2px solid white;
+    text-align: justify;
+
+}
+
+.perfil{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 2px solid rgb(235, 11, 235);
+    background-color: rgb(235, 11, 235);
+}
+
+.enlaces a{
+    display: block;
+    margin:10px 0 ;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: rgba(255, 2555, 255, 0.3);
+    color: white;
+    text-decoration: none;
+    border: 2px solid white;
+    transition:  background-color 0.3s;
+}
+
+.enlaces a:hover{
+    background-color: rgba(0, 255, 255, 0.5);
+    color: aqua;
+    border: 2px solid aqua;
+    
+}
+
+.redes a{
+    display: inline-block;
+    margin: 10px 10px;
+    font-size: 24px;
+    text-decoration: none;
+    transition: transform 0.3s;
+}
+
+.redes a:hover{
+    transform: scale(1.2);
+}
+
+a img{
+    padding: auto;
+    width: 30px;
+    height: 30px;
+}
