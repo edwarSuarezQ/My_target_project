@@ -5,7 +5,7 @@
 }
 
 body{
-    background-color: #1a1a1a;
+    background-color: #2f2f2f;
     height: 100vh;
     display: block;
     text-align: center;
@@ -13,23 +13,26 @@ body{
 }
 
 .contenedor{
+    align-items: center;
     width: 100%;
     height: auto;
 }
 
 .tarjeta{
-    background-color: rgb(138, 41, 235);
+    background-color: #1e1e1e;
     width: 350px; 
     margin: 0 auto;
     text-align: center;
     padding: 30px;
-    border-radius: 20px;
-    border: 2px solid rgb(235, 11, 235);
+    border-radius: 15px;
+    border: 2px solid #00bfff;
+    box-shadow: 0 4px 8px rgba(0, 191, 255, 0.3); 
 }
 
-h1 {
-    color: white;
-    margin: 10px 0;
+.tarjeta h1,h2{
+    color: #00bfff;
+    margin: 5px 0;
+    text-shadow: 0 4px 8px rgba(0, 191, 255, 0.3);
 }
 
 p{
@@ -37,38 +40,47 @@ p{
     margin-bottom: 20px;
     margin: 20px 0;
     padding: 20px;
-    background-color:rgba(255, 2555, 255, 0.3);
     border-radius: 8px;
-    border: 2px solid white;
     text-align: justify;
-
-}
-
-.perfil{
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    border: 2px solid rgb(235, 11, 235);
-    background-color: rgb(235, 11, 235);
-}
-
-.enlaces a{
-    display: block;
-    margin:10px 0 ;
-    padding: 15px;
-    border-radius: 8px;
-    background-color: rgba(255, 2555, 255, 0.3);
-    color: white;
-    text-decoration: none;
-    border: 2px solid white;
     transition:  background-color 0.3s;
 }
 
+p:hover{
+    color: #00bfff;
+    text-shadow: 0 4px 8px rgba(0, 191, 255, 0.3);
+}
+
+.perfil{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 2px solid #00bfff;
+    box-shadow: 0px 4px 20px rgba(0, 191, 255, 0.3);
+    transition: transform 2s;
+}
+
+.perfil:hover {
+    transform: rotateY(720deg);
+}
+
+.enlaces a{
+    position: relative;
+    display: block;
+    margin:10px 0 ;
+    padding: 12px;
+    border-radius: 8px;
+    background-color:rgba(255, 2555, 255, 0.3);
+    color: white;
+    text-decoration: none;
+    border: 2px solid white;
+    transition:  background-color 0.3s, transform 0.3s;
+}
+
 .enlaces a:hover{
-    background-color: rgba(0, 255, 255, 0.5);
-    color: aqua;
+    background-color: #0088cc;
     border: 2px solid aqua;
-    
+    box-shadow: 0 4px 8px rgba(0, 191, 255, 0.3);
+    transform: scale(1.05);
 }
 
 .redes a{
@@ -77,14 +89,54 @@ p{
     font-size: 24px;
     text-decoration: none;
     transition: transform 0.3s;
+    position: relative;
 }
 
 .redes a:hover{
     transform: scale(1.2);
 }
 
-a img{
+.redes a img{
     padding: auto;
     width: 30px;
     height: 30px;
+}
+
+.lenguajes a{
+    display: inline-block;
+    margin: 0px 10px;
+    font-size: 24px;
+    text-decoration: none;
+    transition: transform 0.3s;
+}
+
+.lenguajes a:hover{
+    transform: scale(1.2);
+}
+
+.lenguajes a img{
+    padding: auto;
+    width: 30px;
+    height: 30px;
+}
+
+.mensaje-secreto{
+    visibility: hidden;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #0088cc;
+    color: white;
+    border-radius: 8px;
+    border: solid 1px white;
+    font-size: 10px;
+    padding: 5px;
+    z-index: 10;
+    white-space: nowrap;
+    
+}
+
+.tarjeta a:hover .mensaje-secreto{
+    visibility: visible;
 }
